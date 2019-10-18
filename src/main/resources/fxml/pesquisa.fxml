@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.lm.view.PesquisaView">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <VBox layoutY="4.0" prefHeight="375.0" prefWidth="640.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Label text="Critério de Pesquisa" />
+                  <TextField fx:id="criterioPesquisa" />
+                  <Label text="Classe Processual" />
+                  <TextField fx:id="classeProcessual" />
+                  <Label text="Assunto" />
+                  <TextField fx:id="assunto" />
+                  <Label text="Orgão julgador" />
+                  <TextField fx:id="orgaoJulgador" />
+                  <Label text="Relator" />
+                  <TextField fx:id="relator" />
+                  <Label text="Comarca" />
+                  <TextField fx:id="comarca" />
+                  <HBox layoutX="10.0" layoutY="262.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefWidth="250.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label text="Inicio julgamento" />
+                              <DatePicker fx:id="inicioJulgamento" editable="false" />
+                           </children>
+                        </VBox>
+                        <VBox prefWidth="250.0">
+                           <children>
+                              <Label text="Fim julgamento" />
+                              <DatePicker fx:id="fimJulgamento" editable="false" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <VBox prefWidth="250.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label text="Inicio publicação" />
+                              <DatePicker fx:id="inicioPublicacao" editable="false" />
+                           </children>
+                        </VBox>
+                        <VBox prefWidth="250.0">
+                           <children>
+                              <Label text="Fim publicação" />
+                              <DatePicker fx:id="fimPublicacao" editable="false" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnPesquisar" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
